@@ -1,12 +1,11 @@
 export default function handler(req, res) {
-  // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ success: false, message: "Method Not Allowed" });
   }
 
   const { key, userid } = req.body;
 
-  // 🔑 YOUR LICENSE KEYS — add/remove as needed
+  // 🔑 Your Roblox license keys — add/remove as needed
   const LICENSES = {
     "ABC-123-ROBLOX": true,
     "DEV-456-LICENSE": true,
