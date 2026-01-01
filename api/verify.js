@@ -5,7 +5,7 @@ export default function handler(req, res) {
 
   const { key, userid } = req.body;
 
-  // 🔑 LICENSE KEYS (CHANGE THESE)
+  // 🔑 Your Roblox license keys
   const LICENSES = {
     "ABC-123-ROBLOX": true,
     "DEV-456-LICENSE": true,
@@ -13,10 +13,7 @@ export default function handler(req, res) {
   };
 
   if (LICENSES[key]) {
-    return res.status(200).json({
-      success: true,
-      user: userid
-    });
+    return res.status(200).json({ success: true, user: userid });
   }
 
   return res.status(401).json({ success: false });
